@@ -1,7 +1,7 @@
 ---
 layout: page
 ---
-{% assign team = site.data.team | sort: "givenName" %}
+{% assign team = site.team | sort: "givenName" %}
 {% assign lab = site.baseurl | remove: "/" %}
 
 {{ content }}

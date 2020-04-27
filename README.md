@@ -72,6 +72,18 @@ Refers to files within the `_layouts` directory, that define the markup for your
   [ORCID](https://orcid.org) profiles and to their CV (or whatever
   personal website they might have). It reads data from the `_team`
   collection that is compliant with the schema.org specification.
+- `page.html` &mdash; This standard Minima layout has been extended with
+  the addition of Author and Date fields, which will render only when
+  the corresponding front matter information is available. The Author
+  front matter is expected to be structured as follows:
+
+```yaml
+author:
+- name: "First Author"
+  affiliation: "University 1"
+- name: "Second Author"
+  affiliation: "Another School"
+```
 
 ### Includes
 
