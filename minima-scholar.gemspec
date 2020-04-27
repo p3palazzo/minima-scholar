@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "minima-scholar"
-  spec.version       = "2.5.0"
+  spec.version       = "2.5.1"
   spec.authors       = ["Pedro P. Palazzo"]
   spec.email         = ["p3palazzo@github.com"]
 
