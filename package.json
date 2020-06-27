@@ -1,0 +1,15 @@
+{
+  "name": "minima-scholar",
+  "version": "2.5.4",
+  "description": "An extension of Minima for research groups and projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pedro P. Palazzo",
+  "license": "CC-BY-4.0",
+  "dependencies": {
+    "yaml": "~1.10.0"
+  }
+}

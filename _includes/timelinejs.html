@@ -1,0 +1,27 @@
+<link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+<link title="timeline-styles" rel="stylesheet" href="//cdn.knightlab.com/libs/timeline3/latest/css/fonts/font.opensans-gentiumbook.css">
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+<div id='timeline-embed' style="width: 100%; height: 600px"></div>
+<script type="text/javascript">
+  // List of options: http://timeline.knightlab.com/docs/options.html
+  var options = {
+    is_embed: true,
+    is_full_embed: true,
+    initial_zoom: 2
+  }
+  // The solution below requires the YAML parser to be installed in the target
+  // website repository NOT this theme repository. https://eemeli.org/yaml/
+  const fs = require('fs')
+  const YAML = require('yaml')
+  const file = fs.readFileSync('{{ include.yaml-source }}', 'utf8')
+  var timeline_json = YAML.parse(file);
+  // Otherwise pass the URL of a JSON file or public Google Sheet
+  // in lieu of `timeline_json` to the timeline constructor below.
+  timeline = new TL.Timeline('timeline-embed', timeline_json, options);
+</script>
+<!--
+   - In the content, call the include with:
+   - {% include timelinejs.html yaml-source="./somefile.yaml" %}
+   - As per:
+   - https://gist.github.com/elipousson/1b02f519d546e8d0dd67
+  -->
